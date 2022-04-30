@@ -1,2 +1,2 @@
 # Spring2DJamGarden
-game jam game with Jared &amp; Anand Spring2022
+Game jam game with Jared &amp; Anand Spring2022
