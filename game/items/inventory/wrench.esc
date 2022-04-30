@@ -1,6 +1,6 @@
 :look
-say player "That's a wrench on the floor." [!i/r5_wrench]
-say player "It seems even more useful now that I picked it up." [i/r5_wrench]
+say anand "That's a wrench on the floor." [!i/r5_wrench]
+say anand "It seems even more useful now that I picked it up." [i/r5_wrench]
 stop
 
 :pickup

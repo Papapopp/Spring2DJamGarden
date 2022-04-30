@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://addons/escoria-core/game/core-scripts/esc_room.gd" type="Script" id=1]
 [ext_resource path="res://addons/escoria-core/game/core-scripts/esc_background.gd" type="Script" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://addons/escoria-core/game/core-scripts/esc_location.gd" type="Script" id=4]
 [ext_resource path="res://pub_bg.png" type="Texture" id=5]
 [ext_resource path="res://game/characters/anand/anand.tscn" type="PackedScene" id=6]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_item.gd" type="Script" id=7]
+[ext_resource path="res://game/items/inventory/pub_mug.tscn" type="PackedScene" id=8]
+[ext_resource path="res://game/items/inventory/r5_wrench.tscn" type="PackedScene" id=9]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 745, 936, 707, 563, 967, 574, 965, 799, 1739, 803, 1741, 938 )
@@ -34,7 +37,28 @@ script = ExtResource( 3 )
 navpoly = SubResource( 1 )
 
 [node name="start" type="Position2D" parent="."]
-position = Vector2( 829, 875 )
+position = Vector2( 821, 873 )
 script = ExtResource( 4 )
 global_id = "start"
 is_start_location = true
+
+[node name="blackboard" type="Area2D" parent="."]
+pause_mode = 1
+script = ExtResource( 7 )
+global_id = "blackboard"
+esc_script = "res://game/rooms/pub/blackboard.esc"
+dialog_color = Color( 1, 1, 1, 1 )
+animations = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="blackboard"]
+polygon = PoolVector2Array( 1084, 90, 1078, 358, 1218, 371, 1228, 112 )
+
+[node name="ESCLocation" type="Position2D" parent="blackboard"]
+position = Vector2( 1171, 811 )
+script = ExtResource( 4 )
+
+[node name="mug" parent="." instance=ExtResource( 8 )]
+position = Vector2( 650, 36 )
+
+[node name="wrench" parent="." instance=ExtResource( 9 )]
+position = Vector2( 516, 168 )

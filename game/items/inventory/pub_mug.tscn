@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_item.gd" type="Script" id=1]
+[ext_resource path="res://game/items/textures/mug.png" type="Texture" id=2]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_location.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 55, 58.25 )
+
+[node name="mug" type="Area2D"]
+pause_mode = 1
+script = ExtResource( 1 )
+global_id = "mug"
+esc_script = "res://game/items/inventory/mug.esc"
+tooltip_name = "Mug"
+default_action = "look"
+default_action_inventory = "look"
+inventory_texture = ExtResource( 2 )
+dialog_color = Color( 1, 1, 1, 1 )
+animations = null
+
+[node name="TextureRect" type="Sprite" parent="."]
+position = Vector2( 251, 479 )
+scale = Vector2( 0.220703, 0.220703 )
+texture = ExtResource( 2 )
+
+[node name="ESCLocation" type="Position2D" parent="."]
+position = Vector2( 251, 561 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 253, 483.25 )
+shape = SubResource( 1 )

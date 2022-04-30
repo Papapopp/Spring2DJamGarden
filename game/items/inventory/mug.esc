@@ -1,0 +1,6 @@
+:Touch
+inventory_add mug
+set_active mug false
+
+:Taste
+say anand "ew gross"
