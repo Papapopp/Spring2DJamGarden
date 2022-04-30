@@ -1,0 +1,342 @@
+[gd_scene load_steps=59 format=2]
+
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_player.gd" type="Script" id=1]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/resources/esc_directionangle.gd" type="Script" id=2]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/resources/esc_animationresource.gd" type="Script" id=3]
+[ext_resource path="res://game/characters/anand/spritesheet-walk.png" type="Texture" id=4]
+[ext_resource path="res://game/characters/anand/spritesheet-idle.png" type="Texture" id=5]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/resources/esc_animationname.gd" type="Script" id=6]
+
+[sub_resource type="Resource" id=2]
+resource_name = "Up"
+script = ExtResource( 2 )
+angle_start = 340
+angle_size = 49
+
+[sub_resource type="Resource" id=3]
+resource_name = "upRight"
+script = ExtResource( 2 )
+angle_start = 20
+angle_size = 50
+
+[sub_resource type="Resource" id=4]
+resource_name = "right"
+script = ExtResource( 2 )
+angle_start = 70
+angle_size = 40
+
+[sub_resource type="Resource" id=5]
+resource_name = "downRight"
+script = ExtResource( 2 )
+angle_start = 110
+angle_size = 50
+
+[sub_resource type="Resource" id=6]
+resource_name = "down"
+script = ExtResource( 2 )
+angle_start = 160
+angle_size = 40
+
+[sub_resource type="Resource" id=7]
+resource_name = "downLeft"
+script = ExtResource( 2 )
+angle_start = 200
+angle_size = 50
+
+[sub_resource type="Resource" id=8]
+resource_name = "left"
+script = ExtResource( 2 )
+angle_start = 250
+angle_size = 40
+
+[sub_resource type="Resource" id=9]
+resource_name = "upLeft"
+script = ExtResource( 2 )
+angle_start = 290
+angle_size = 50
+
+[sub_resource type="Resource" id=10]
+script = ExtResource( 6 )
+animation = "back"
+mirrored = false
+
+[sub_resource type="Resource" id=11]
+script = ExtResource( 6 )
+animation = "backright"
+mirrored = false
+
+[sub_resource type="Resource" id=12]
+script = ExtResource( 6 )
+animation = "left"
+mirrored = true
+
+[sub_resource type="Resource" id=13]
+script = ExtResource( 6 )
+animation = "frontleft"
+mirrored = true
+
+[sub_resource type="Resource" id=14]
+script = ExtResource( 6 )
+animation = "front"
+mirrored = false
+
+[sub_resource type="Resource" id=15]
+script = ExtResource( 6 )
+animation = "frontleft"
+mirrored = false
+
+[sub_resource type="Resource" id=16]
+script = ExtResource( 6 )
+animation = "left"
+mirrored = false
+
+[sub_resource type="Resource" id=17]
+script = ExtResource( 6 )
+animation = "backright"
+mirrored = true
+
+[sub_resource type="Resource" id=45]
+script = ExtResource( 6 )
+animation = "idleback"
+mirrored = false
+
+[sub_resource type="Resource" id=46]
+script = ExtResource( 6 )
+animation = "idlebackright"
+mirrored = false
+
+[sub_resource type="Resource" id=47]
+script = ExtResource( 6 )
+animation = "idleleft"
+mirrored = true
+
+[sub_resource type="Resource" id=48]
+script = ExtResource( 6 )
+animation = "idlefrontleft"
+mirrored = true
+
+[sub_resource type="Resource" id=49]
+script = ExtResource( 6 )
+animation = "idlefront"
+mirrored = false
+
+[sub_resource type="Resource" id=50]
+script = ExtResource( 6 )
+animation = "idlefrontleft"
+mirrored = false
+
+[sub_resource type="Resource" id=51]
+script = ExtResource( 6 )
+animation = "idleleft"
+mirrored = false
+
+[sub_resource type="Resource" id=52]
+script = ExtResource( 6 )
+animation = "idlebackright"
+mirrored = true
+
+[sub_resource type="Resource" id=18]
+script = ExtResource( 3 )
+dir_angles = [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ]
+directions = [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ]
+idles = [ SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ) ]
+speaks = [  ]
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 115, 0, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 230, 0, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 345, 0, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 840, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 115, 840, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 230, 840, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 345, 840, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=27]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 1120, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=28]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 115, 1120, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=29]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 230, 1120, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=30]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 345, 1120, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=31]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 115, 0, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=32]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 280, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=33]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 115, 280, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 230, 280, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 345, 280, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 460, 0, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 560, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 115, 560, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 230, 560, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=40]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 345, 560, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=41]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 230, 0, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=42]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=43]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 345, 0, 115, 280 )
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
+"loop": true,
+"name": "left",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
+"loop": true,
+"name": "front",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ) ],
+"loop": true,
+"name": "back",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 31 ) ],
+"loop": true,
+"name": "idlefrontright",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ) ],
+"loop": true,
+"name": "frontleft",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 36 ) ],
+"loop": true,
+"name": "idlebackleft",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ) ],
+"loop": true,
+"name": "backright",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 41 ) ],
+"loop": true,
+"name": "idleback",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 42 ) ],
+"loop": true,
+"name": "idleleft",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 43 ) ],
+"loop": true,
+"name": "idlefront",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=44]
+radius = 29.0
+height = 206.0
+
+[node name="ESCPlayer" type="Area2D"]
+pause_mode = 1
+script = ExtResource( 1 )
+global_id = "anand"
+is_movable = true
+dialog_color = Color( 1, 1, 1, 1 )
+animations = SubResource( 18 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -124 )
+frames = SubResource( 1 )
+animation = "idleleft"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1, -123 )
+shape = SubResource( 44 )

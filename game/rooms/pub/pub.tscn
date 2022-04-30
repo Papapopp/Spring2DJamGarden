@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_room.gd" type="Script" id=1]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_background.gd" type="Script" id=2]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_terrain.gd" type="Script" id=3]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_location.gd" type="Script" id=4]
+[ext_resource path="res://pub_bg.png" type="Texture" id=5]
+[ext_resource path="res://game/characters/anand/anand.tscn" type="PackedScene" id=6]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 745, 936, 707, 563, 967, 574, 965, 799, 1739, 803, 1741, 938 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 0, 3 ), PoolIntArray( 0, 3, 0 ) ]
+outlines = [ PoolVector2Array( 707, 563, 967, 574, 965, 799, 1739, 803, 1741, 938, 745, 936, 745, 936 ) ]
+
+[node name="ESCRoom" type="Node2D"]
+script = ExtResource( 1 )
+global_id = "pub"
+player_scene = ExtResource( 6 )
+camera_limits = [ Rect2( 0, 0, 3975, 956 ) ]
+
+[node name="ESCBackground" type="TextureRect" parent="."]
+margin_left = 53.0
+margin_top = -4.0
+margin_right = 4029.0
+margin_bottom = 952.0
+mouse_filter = 2
+texture = ExtResource( 5 )
+script = ExtResource( 2 )
+
+[node name="ESCTerrain" type="Navigation2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="ESCTerrain"]
+navpoly = SubResource( 1 )
+
+[node name="start" type="Position2D" parent="."]
+position = Vector2( 829, 875 )
+script = ExtResource( 4 )
+global_id = "start"
+is_start_location = true

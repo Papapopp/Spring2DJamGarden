@@ -743,7 +743,7 @@ enabled=PoolStringArray( "res://addons/escoria-core/plugin.cfg", "res://addons/e
 
 [escoria]
 
-main/game_start_script="res://game/start_game.esc"
+main/game_start_script="res://game.esc"
 main/force_quit=true
 debug/terminate_on_warnings=false
 debug/terminate_on_errors=true
