@@ -207,6 +207,11 @@ flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 115, 0, 115, 280 )
 
+[sub_resource type="AtlasTexture" id=41]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 230, 0, 115, 280 )
+
 [sub_resource type="AtlasTexture" id=32]
 flags = 4
 atlas = ExtResource( 4 )
@@ -227,10 +232,15 @@ flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 345, 280, 115, 280 )
 
-[sub_resource type="AtlasTexture" id=36]
+[sub_resource type="AtlasTexture" id=43]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 460, 0, 115, 280 )
+region = Rect2( 345, 0, 115, 280 )
+
+[sub_resource type="AtlasTexture" id=42]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 115, 280 )
 
 [sub_resource type="AtlasTexture" id=37]
 flags = 4
@@ -252,20 +262,10 @@ flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 345, 560, 115, 280 )
 
-[sub_resource type="AtlasTexture" id=41]
+[sub_resource type="AtlasTexture" id=36]
 flags = 4
 atlas = ExtResource( 5 )
-region = Rect2( 230, 0, 115, 280 )
-
-[sub_resource type="AtlasTexture" id=42]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 115, 280 )
-
-[sub_resource type="AtlasTexture" id=43]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 345, 0, 115, 280 )
+region = Rect2( 460, 0, 115, 280 )
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -289,24 +289,19 @@ animations = [ {
 "name": "idlefrontright",
 "speed": 5.0
 }, {
+"frames": [ SubResource( 41 ) ],
+"loop": true,
+"name": "idleback",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ) ],
 "loop": true,
 "name": "frontleft",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 36 ) ],
+"frames": [ SubResource( 43 ) ],
 "loop": true,
-"name": "idlebackleft",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ) ],
-"loop": true,
-"name": "backright",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 41 ) ],
-"loop": true,
-"name": "idleback",
+"name": "idlefront",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 42 ) ],
@@ -314,9 +309,14 @@ animations = [ {
 "name": "idleleft",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 43 ) ],
+"frames": [ SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ) ],
 "loop": true,
-"name": "idlefront",
+"name": "backright",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 36 ) ],
+"loop": true,
+"name": "idlebackleft",
 "speed": 5.0
 } ]
 

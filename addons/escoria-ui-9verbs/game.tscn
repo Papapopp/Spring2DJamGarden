@@ -22,9 +22,6 @@ pause_menu = NodePath("ui/pause_menu")
 [node name="ESCDialogsPlayer" type="Control" parent="dialog_layer"]
 theme = ExtResource( 10 )
 script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ui" type="CanvasLayer" parent="."]
 
@@ -33,23 +30,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 theme = ExtResource( 10 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="panel_down" type="PanelContainer" parent="ui/Control"]
-anchor_top = 0.7
+anchor_top = 0.849
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_vertical = 3
 custom_styles/panel = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ui/Control/panel_down"]
 margin_right = 1280.0
-margin_bottom = 270.0
+margin_bottom = 135.9
 
 [node name="MarginContainer" type="MarginContainer" parent="ui/Control/panel_down/VBoxContainer"]
 margin_right = 1280.0
@@ -67,21 +58,15 @@ text = "Test"
 fit_content_height = true
 color = Color( 1, 1, 1, 1 )
 
-[node name="HSeparator" type="HSeparator" parent="ui/Control/panel_down/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ui/Control/panel_down/VBoxContainer"]
 margin_top = 36.0
 margin_right = 1280.0
-margin_bottom = 46.0
-custom_constants/separation = 10
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ui/Control/panel_down/VBoxContainer"]
-margin_top = 50.0
-margin_right = 1280.0
-margin_bottom = 270.0
+margin_bottom = 135.0
 size_flags_vertical = 3
 
 [node name="VerbsMargin" type="MarginContainer" parent="ui/Control/panel_down/VBoxContainer/HBoxContainer"]
 margin_right = 424.0
-margin_bottom = 220.0
+margin_bottom = 99.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 20
@@ -93,12 +78,12 @@ custom_constants/margin_bottom = 20
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 404.0
-margin_bottom = 200.0
+margin_bottom = 79.0
 
 [node name="MainMargin" type="MarginContainer" parent="ui/Control/panel_down/VBoxContainer/HBoxContainer"]
 margin_left = 428.0
 margin_right = 852.0
-margin_bottom = 220.0
+margin_bottom = 99.0
 size_flags_horizontal = 3
 custom_constants/margin_right = 20
 custom_constants/margin_top = 20
@@ -109,13 +94,13 @@ custom_constants/margin_bottom = 20
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 404.0
-margin_bottom = 200.0
+margin_bottom = 79.0
 
 [node name="MarginContainer" type="MarginContainer" parent="ui/Control/panel_down/VBoxContainer/HBoxContainer/MainMargin/VBoxContainer"]
 margin_left = 142.0
-margin_top = 70.0
+margin_top = 9.0
 margin_right = 242.0
-margin_bottom = 110.0
+margin_bottom = 49.0
 rect_min_size = Vector2( 100, 40 )
 size_flags_horizontal = 6
 size_flags_vertical = 6
@@ -128,7 +113,7 @@ text = "Menu"
 [node name="InventoryMargin" type="MarginContainer" parent="ui/Control/panel_down/VBoxContainer/HBoxContainer"]
 margin_left = 856.0
 margin_right = 1280.0
-margin_bottom = 220.0
+margin_bottom = 99.0
 size_flags_horizontal = 3
 custom_constants/margin_right = 20
 custom_constants/margin_top = 20
@@ -139,7 +124,7 @@ custom_constants/margin_bottom = 20
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 404.0
-margin_bottom = 200.0
+margin_bottom = 79.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 

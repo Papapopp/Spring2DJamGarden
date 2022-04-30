@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_room.gd" type="Script" id=1]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_background.gd" type="Script" id=2]
+[ext_resource path="res://game/rooms/garden/temp_bg.png" type="Texture" id=3]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_terrain.gd" type="Script" id=4]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_location.gd" type="Script" id=5]
+[ext_resource path="res://game/characters/anand/anand.tscn" type="PackedScene" id=6]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_item.gd" type="Script" id=7]
+[ext_resource path="res://game/items/textures/stalk-2.png.png" type="Texture" id=8]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 152, 247, 104, 248, 106, 88, 152, 86, 248, 52, 251, 244, 210, 244, 210, 87, 25, 51, 25, 88 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 8, 4, 7, 3 ), PoolIntArray( 8, 3, 2, 9 ) ]
+outlines = [ PoolVector2Array( 248, 52, 25, 51, 25, 88, 106, 88, 104, 248, 152, 247, 152, 86, 210, 87, 210, 244, 251, 244 ) ]
+
+[node name="ESCRoom" type="Node2D"]
+script = ExtResource( 1 )
+global_id = "garden"
+player_scene = ExtResource( 6 )
+camera_limits = [ Rect2( 0, 0, 256, 256 ) ]
+
+[node name="ESCBackground" type="TextureRect" parent="."]
+margin_right = 256.0
+margin_bottom = 256.0
+mouse_filter = 2
+texture = ExtResource( 3 )
+script = ExtResource( 2 )
+
+[node name="ESCTerrain" type="Navigation2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="ESCTerrain"]
+navpoly = SubResource( 1 )
+
+[node name="start" type="Position2D" parent="."]
+position = Vector2( 122, 220 )
+script = ExtResource( 5 )
+global_id = "start"
+is_start_location = true
+
+[node name="Stalk" type="Area2D" parent="."]
+pause_mode = 1
+script = ExtResource( 7 )
+global_id = "stalk"
+inventory_texture = ExtResource( 8 )
+dialog_color = Color( 1, 1, 1, 1 )
+animations = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stalk"]
+
+[node name="TextureRect" type="TextureRect" parent="Stalk"]
+margin_left = 491.0
+margin_top = 513.0
+margin_right = 531.0
+margin_bottom = 553.0
+texture = ExtResource( 8 )
