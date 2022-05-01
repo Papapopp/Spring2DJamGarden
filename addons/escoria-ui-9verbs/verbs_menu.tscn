@@ -10,7 +10,7 @@ size_flags_vertical = 3
 columns = 3
 script = ExtResource( 1 )
 
-[node name="Examine" type="Button" parent="."]
+[node name="examine" type="Button" parent="."]
 margin_right = 161.0
 margin_bottom = 263.0
 size_flags_horizontal = 3
@@ -21,7 +21,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Touch" type="Button" parent="."]
+[node name="touch" type="Button" parent="."]
 margin_left = 165.0
 margin_right = 326.0
 margin_bottom = 263.0
@@ -33,7 +33,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Taste" type="Button" parent="."]
+[node name="taste" type="Button" parent="."]
 margin_left = 330.0
 margin_right = 491.0
 margin_bottom = 263.0
