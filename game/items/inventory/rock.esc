@@ -1,8 +1,5 @@
 :examine
-> [!cleanStalk]
-	say thechild "Lmao look at those little dudes go!"
-> [cleanStalk]
-	say thechild "I miss those sticky dudes..."
+say thechild "Lmao look at those little dudes go!"
 
 :pickup
 say thechild "Ah! Sticky!"

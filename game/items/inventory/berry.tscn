@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://addons/escoria-core/game/core-scripts/esc_item.gd" type="Script" id=1]
-[ext_resource path="res://game/items/inventory/rockwithoutworms.png" type="Texture" id=2]
+[ext_resource path="res://game/items/inventory/berry.png" type="Texture" id=2]
 
 [node name="ESCItem" type="Area2D"]
 pause_mode = 1
 script = ExtResource( 1 )
-global_id = "wormless_rock"
-esc_script = "res://game/items/inventory/wormless_rock.esc"
-tooltip_name = "wormless rock"
+global_id = "berry"
+esc_script = "res://game/items/inventory/berry.esc"
+use_from_inventory_only = true
 inventory_texture = ExtResource( 2 )
 dialog_color = Color( 1, 1, 1, 1 )
 animations = null

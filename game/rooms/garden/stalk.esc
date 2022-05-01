@@ -19,7 +19,6 @@ set_global cleanStalk true
 :pickup
 > [cleanStalk]
 	say thechild "Oh! I can grab a berry now!"
-	# add berry to inventory
 	inventory_add berry
 > [!cleanStalk]
 	say thechild "Ouch! Can't reach the berries with those spiky insects in the way."

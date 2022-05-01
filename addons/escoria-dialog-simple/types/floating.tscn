@@ -6,13 +6,10 @@
 margin_right = 643.0
 margin_bottom = 60.0
 bbcode_enabled = true
-bbcode_text = "[center]Here be some text.[/center]"
+bbcode_text = "[color=black][center]Here be some text.[/center][/color]"
 text = "Here be some text."
 fit_content_height = true
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Tween" type="Tween" parent="."]
 

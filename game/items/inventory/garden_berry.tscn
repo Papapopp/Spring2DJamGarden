@@ -6,10 +6,12 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 54.1479
 
-[node name="ESCItem" type="Area2D"]
+[node name="Berry" type="Area2D"]
 pause_mode = 1
 script = ExtResource( 1 )
-global_id = "berry"
+global_id = "berries"
+esc_script = "res://game/items/inventory/berry.esc"
+use_from_inventory_only = true
 inventory_texture = ExtResource( 2 )
 dialog_color = Color( 1, 1, 1, 1 )
 animations = null

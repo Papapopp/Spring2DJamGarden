@@ -41,6 +41,7 @@ pause_mode = 1
 script = ExtResource( 1 )
 global_id = "rock"
 esc_script = "res://game/items/inventory/rock.esc"
+tooltip_name = "wormy rock"
 combine_when_selected_action_is_in = PoolStringArray( "use" )
 use_from_inventory_only = true
 inventory_texture = ExtResource( 4 )
