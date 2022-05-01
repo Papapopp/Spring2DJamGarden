@@ -1,2 +1,7 @@
 :examine
 say thechild "Lmao look at those little dudes go!"
+
+:pickup
+say thechild "Ah! Sticky!"
+inventory_add rock
+set_active rock false

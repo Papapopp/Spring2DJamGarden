@@ -21,26 +21,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="touch" type="Button" parent="."]
+[node name="use" type="Button" parent="."]
 margin_left = 165.0
 margin_right = 326.0
 margin_bottom = 263.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = true
-text = "Touch"
+text = "Use"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="taste" type="Button" parent="."]
+[node name="pickup" type="Button" parent="."]
 margin_left = 330.0
 margin_right = 491.0
 margin_bottom = 263.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = true
-text = "Taste"
+text = "Pickup"
 __meta__ = {
 "_edit_use_anchors_": false
 }

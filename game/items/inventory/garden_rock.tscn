@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://addons/escoria-core/game/core-scripts/esc_item.gd" type="Script" id=1]
 [ext_resource path="res://addons/escoria-core/game/core-scripts/esc_location.gd" type="Script" id=2]
 [ext_resource path="res://game/items/inventory/rocksheet.png" type="Texture" id=3]
+[ext_resource path="res://game/items/inventory/rockwithworms.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=6]
 radius = 57.8705
@@ -39,6 +40,10 @@ animations = [ {
 pause_mode = 1
 script = ExtResource( 1 )
 global_id = "rock"
+esc_script = "res://game/items/inventory/rock.esc"
+combine_when_selected_action_is_in = PoolStringArray( "use" )
+use_from_inventory_only = true
+inventory_texture = ExtResource( 4 )
 dialog_color = Color( 1, 1, 1, 1 )
 animations = null
 
@@ -49,7 +54,6 @@ shape = SubResource( 6 )
 frames = SubResource( 5 )
 animation = "wiggle"
 frame = 1
-playing = true
 
 [node name="ESCLocation" type="Position2D" parent="."]
 position = Vector2( 0, 136 )

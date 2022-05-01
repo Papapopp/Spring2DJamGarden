@@ -1,2 +1,10 @@
 :examine
 say thechild "Ouchy!"
+
+:use rock
+say thechild "Get bonked! lmao"
+# switch the stalk texture
+custom stalk Textures cleanStalk
+# switch the rock texture
+inventory_remove rock
+inventory_add wormless_rock

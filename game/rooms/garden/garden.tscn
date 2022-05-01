@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://addons/escoria-core/game/core-scripts/esc_room.gd" type="Script" id=1]
 [ext_resource path="res://addons/escoria-core/game/core-scripts/esc_background.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://game/items/textures/stalk-1.png" type="Texture" id=8]
 [ext_resource path="res://game/items/textures/stalk-2.png" type="Texture" id=9]
 [ext_resource path="res://game/items/inventory/garden_rock.tscn" type="PackedScene" id=10]
+[ext_resource path="res://game/rooms/garden/stalkspriteswapscript.gd" type="Script" id=11]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 664, 99, 674, 765, 578, 762, 572, 197, 97, 99, 286, 192, 101, 196, 194, 198, 287, 677, 194, 675 )
@@ -61,42 +62,23 @@ animations = null
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stalk"]
 position = Vector2( 17.3937, 11.4937 )
 scale = Vector2( 2.0625, 2.53125 )
-polygon = PoolVector2Array( -10.8576, -2.96049, 35.6879, -2.56543, 34.7182, 33.3852, -10.3727, 33.3852 )
-
-[node name="Sprite" type="Sprite" parent="Stalk"]
-position = Vector2( 42, 52 )
-texture = ExtResource( 9 )
+polygon = PoolVector2Array( -4.55453, -4.14568, 26.4758, -4.9358, 16.2939, 33.7802, -0.190903, 33.7802 )
 
 [node name="ESCLocation" type="Position2D" parent="Stalk"]
 position = Vector2( -40, 45 )
 script = ExtResource( 5 )
 
-[node name="StalkAfterRemove" type="Area2D" parent="."]
-pause_mode = 1
-visible = false
-position = Vector2( 299, 294 )
-script = ExtResource( 7 )
-global_id = "stalkAfter"
-inventory_texture = SubResource( 2 )
-dialog_color = Color( 1, 1, 1, 1 )
-animations = null
+[node name="Textures" type="Node" parent="Stalk"]
+script = ExtResource( 11 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StalkAfterRemove"]
-visible = false
-position = Vector2( 17.3938, 11.4938 )
-scale = Vector2( 2.0625, 2.53125 )
-polygon = PoolVector2Array( -1.64545, -2.96049, 21.6273, -2.96049, 16.2939, 34.5704, 1.26364, 34.1753 )
-disabled = true
+[node name="SpikeySprite" type="Sprite" parent="Stalk/Textures"]
+position = Vector2( 341, 346 )
+texture = ExtResource( 9 )
 
-[node name="Sprite" type="Sprite" parent="StalkAfterRemove"]
+[node name="Spikeless" type="Sprite" parent="Stalk/Textures"]
 visible = false
-position = Vector2( 42, 52 )
+position = Vector2( 341, 346 )
 texture = ExtResource( 8 )
-
-[node name="ESCLocation" type="Position2D" parent="StalkAfterRemove"]
-visible = false
-position = Vector2( -29, 50 )
-script = ExtResource( 5 )
 
 [node name="Rock" parent="." instance=ExtResource( 10 )]
 position = Vector2( 616, 56 )
