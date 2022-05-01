@@ -15,6 +15,6 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func cleanStalk():
+func cleanStalk(_notused):
 	get_node("SpikeySprite").hide()
 	get_node("Spikeless").show()
