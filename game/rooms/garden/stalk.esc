@@ -1,5 +1,10 @@
+set_global <global cleanStalk> <global false>
+
 :examine
-say thechild "Ouchy!"
+> [!cleanStalk]
+	say thechild "There're antlike creatures, burrowed into the stalk! They look like they'd be tasty to something."
+> [cleanStalk]
+	say thechild "The worms and burrowing bugs engaged in mutually assured destruction."
 
 :use rock
 say thechild "Get bonked! lmao"
@@ -8,3 +13,13 @@ custom stalk Textures cleanStalk
 # switch the rock texture
 inventory_remove rock
 inventory_add wormless_rock
+set_global cleanStalk true
+
+
+:pickup
+> [cleanStalk]
+	say thechild "Oh! I can grab a berry now!"
+	# add berry to inventory
+	inventory_add berry
+> [!cleanStalk]
+	say thechild "Ouch! Can't reach the berries with those spiky insects in the way."
