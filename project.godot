@@ -710,7 +710,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Escoria"
+config/name="Outer Garden"
 run/main_scene="res://addons/escoria-core/game/main_scene.tscn"
 boot_splash/image="res://addons/escoria-core/design/escoria-logo-small.png"
 boot_splash/fullsize=false
@@ -747,8 +747,8 @@ debug/terminate_on_warnings=false
 debug/terminate_on_errors=true
 debug/development_lang="en"
 ui/tooltip_follows_mouse=false
-main/text_lang="fr_FR"
-main/voice_lang="fr_FR"
+main/text_lang="en_US"
+main/voice_lang="en_US"
 sound/music_volume=1
 sound/sfx_volume=1
 sound/speech_volume=1

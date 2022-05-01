@@ -1,17 +1,18 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://addons/escoria-core/ui_library/menus/main_menu/main_menu.gd" type="Script" id=1]
+[ext_resource path="res://game/fonts/caslonantique.tres" type="DynamicFont" id=2]
 [ext_resource path="res://addons/escoria-core/design/escoria-logo-small.png" type="Texture" id=3]
 [ext_resource path="res://addons/escoria-core/ui_library/menus/options/options.tscn" type="PackedScene" id=4]
 [ext_resource path="res://addons/escoria-core/ui_library/menus/load_save/load/load_game.tscn" type="PackedScene" id=5]
+
+[sub_resource type="Theme" id=1]
+default_font = ExtResource( 2 )
 
 [node name="main_menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="load_game" parent="." instance=ExtResource( 5 )]
 visible = false
@@ -39,23 +40,32 @@ margin_left = -308.0
 margin_right = 308.0
 custom_constants/separation = 100
 alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="main/main"]
-margin_top = 162.0
+visible = false
 margin_right = 616.0
-margin_bottom = 398.0
+margin_bottom = 226.0
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="buttons" type="VBoxContainer" parent="main/main"]
-margin_top = 498.0
+[node name="RichTextLabel" type="RichTextLabel" parent="main/main"]
+margin_top = 106.0
 margin_right = 616.0
-margin_bottom = 738.0
+margin_bottom = 154.0
+size_flags_vertical = 0
+theme = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Outer Garden[/center]"
+text = "Outer Garden"
+fit_content_height = true
+scroll_active = false
+
+[node name="buttons" type="VBoxContainer" parent="main/main"]
+margin_top = 254.0
+margin_right = 616.0
+margin_bottom = 494.0
 custom_constants/separation = 10
 __meta__ = {
 "_edit_use_anchors_": false
@@ -66,7 +76,7 @@ margin_right = 616.0
 margin_bottom = 150.0
 rect_min_size = Vector2( 0, 150 )
 size_flags_vertical = 3
-text = "NEW_GAME"
+text = "NEW GAME"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -75,7 +85,7 @@ __meta__ = {
 margin_top = 160.0
 margin_right = 616.0
 margin_bottom = 180.0
-text = "LOAD_GAME"
+text = "LOAD GAME"
 __meta__ = {
 "_edit_use_anchors_": false
 }
