@@ -7,7 +7,7 @@
 pause_mode = 1
 script = ExtResource( 1 )
 global_id = "wormless_rock"
-tooltip_name = "rock"
+tooltip_name = "wormless rock"
 inventory_texture = ExtResource( 2 )
 dialog_color = Color( 1, 1, 1, 1 )
 animations = null

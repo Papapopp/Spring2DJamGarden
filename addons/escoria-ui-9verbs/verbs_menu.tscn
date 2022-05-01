@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://addons/escoria-ui-9verbs/verbs_menu.gd" type="Script" id=1]
+[ext_resource path="res://game/assets/examine-1.png" type="Texture" id=2]
+[ext_resource path="res://game/assets/use-1.png" type="Texture" id=3]
+[ext_resource path="res://game/assets/pickup-2.png" type="Texture" id=4]
 
 [node name="actions" type="GridContainer"]
 margin_right = 493.0
@@ -17,6 +20,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = true
 text = "Examine"
+icon = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -29,6 +33,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = true
 text = "Use"
+icon = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -41,6 +46,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 toggle_mode = true
 text = "Pickup"
+icon = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
