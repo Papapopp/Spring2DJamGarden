@@ -82,15 +82,19 @@ dialog_color = Color( 1, 1, 1, 1 )
 animations = null
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StalkAfterRemove"]
+visible = false
 position = Vector2( 17.3938, 11.4938 )
 scale = Vector2( 2.0625, 2.53125 )
 polygon = PoolVector2Array( -1.64545, -2.96049, 21.6273, -2.96049, 16.2939, 34.5704, 1.26364, 34.1753 )
+disabled = true
 
 [node name="Sprite" type="Sprite" parent="StalkAfterRemove"]
+visible = false
 position = Vector2( 42, 52 )
 texture = ExtResource( 8 )
 
 [node name="ESCLocation" type="Position2D" parent="StalkAfterRemove"]
+visible = false
 position = Vector2( -29, 50 )
 script = ExtResource( 5 )
 
