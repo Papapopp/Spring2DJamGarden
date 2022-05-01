@@ -1,18 +1,22 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://addons/escoria-core/game/core-scripts/esc_room.gd" type="Script" id=1]
 [ext_resource path="res://addons/escoria-core/game/core-scripts/esc_background.gd" type="Script" id=2]
 [ext_resource path="res://game/rooms/garden/temp_bg.png" type="Texture" id=3]
 [ext_resource path="res://addons/escoria-core/game/core-scripts/esc_terrain.gd" type="Script" id=4]
 [ext_resource path="res://addons/escoria-core/game/core-scripts/esc_location.gd" type="Script" id=5]
-[ext_resource path="res://game/characters/anand/anand.tscn" type="PackedScene" id=6]
+[ext_resource path="res://game/characters/thechild/thechild.tscn" type="PackedScene" id=6]
 [ext_resource path="res://addons/escoria-core/game/core-scripts/esc_item.gd" type="Script" id=7]
-[ext_resource path="res://game/items/textures/stalk-2.png.png" type="Texture" id=8]
+[ext_resource path="res://game/items/textures/stalk-1.png" type="Texture" id=8]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 152, 247, 104, 248, 106, 88, 152, 86, 248, 52, 251, 244, 210, 244, 210, 87, 25, 51, 25, 88 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 8, 4, 7, 3 ), PoolIntArray( 8, 3, 2, 9 ) ]
 outlines = [ PoolVector2Array( 248, 52, 25, 51, 25, 88, 106, 88, 104, 248, 152, 247, 152, 86, 210, 87, 210, 244, 251, 244 ) ]
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/stalk-2.png-34d9bb756735b6e89ca3df2538c09f70.stex"
 
 [node name="ESCRoom" type="Node2D"]
 script = ExtResource( 1 )
@@ -43,7 +47,7 @@ is_start_location = true
 pause_mode = 1
 script = ExtResource( 7 )
 global_id = "stalk"
-inventory_texture = ExtResource( 8 )
+inventory_texture = SubResource( 2 )
 dialog_color = Color( 1, 1, 1, 1 )
 animations = null
 
@@ -52,8 +56,6 @@ position = Vector2( 70, 94 )
 polygon = PoolVector2Array( -1, 1, 22, 1, 22, 25, 0, 25 )
 
 [node name="TextureRect" type="TextureRect" parent="Stalk"]
-margin_left = 491.0
-margin_top = 513.0
-margin_right = 531.0
-margin_bottom = 553.0
+margin_right = 256.0
+margin_bottom = 256.0
 texture = ExtResource( 8 )
